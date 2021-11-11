@@ -45,4 +45,14 @@ public class GarrafaTest {
       garrafa = new Garrafa(capacidadeZero, volume);
       fail("Você não pode criar uma garrafa com capacidade zero.");
    }
+    @Test
+    public void Abastece_Com_Volume(){
+      int capacidade = 1000;
+      int volume = 700;
+        Garrafa garrafa = new Garrafa(capacidade,volume);   
+        int quantidade_Abastecimento = 100;
+        garrafa.Abastece(quantidade_Abastecimento);
+        assertEquals(volume+quantidade_Abastecimento,garrafa.getVolume());
+        
+    }
 }
